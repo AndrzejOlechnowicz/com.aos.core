@@ -1,0 +1,16 @@
+{
+    "name": "AOsCore",
+    "rootNamespace": "",
+    "references": [
+        "GUID:37fecc876ed0d8f4cb0118066b779c2d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

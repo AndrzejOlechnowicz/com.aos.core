@@ -1,0 +1,17 @@
+{
+    "name": "AOsCore.SO_System",
+    "rootNamespace": "",
+    "references": [
+        "GUID:bfcf955bfd9e5034884c27f1cb1d4b0e",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
