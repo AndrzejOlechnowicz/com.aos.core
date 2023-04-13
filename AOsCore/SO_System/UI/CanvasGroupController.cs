@@ -13,7 +13,7 @@ public class CanvasGroupController : MonoBehaviour
     [SerializeField] private bool deactivateGameObjectAfterHide;
     
     private CanvasGroup _group;
-    //private TweenerCore<float, float, FloatOptions> currentTween; 
+    
 
     private void Awake()
     {
@@ -55,7 +55,7 @@ public class CanvasGroupController : MonoBehaviour
     {
         _group.interactable = true;
         _group.blocksRaycasts = true;
-        //currentTween = _group.DOFade(1, fadeTime);
+        FadeOutAnimation(fadeTime);
         
         Debug.Log("InteractionButtonInfo  - Canvas group controller - Activate");
         Activate();
@@ -79,7 +79,7 @@ public class CanvasGroupController : MonoBehaviour
     {
         _group.interactable = false;
         _group.blocksRaycasts = false;
-        //currentTween = _group.DOFade(0, fadeTime);
+        FadeInAnimation(fadeTime);
 
         if (deactivateGameObjectAfterHide)
         {
@@ -105,6 +105,16 @@ public class CanvasGroupController : MonoBehaviour
     private void Deactivate()
     {
         gameObject.SetActive(false);
+    }
+
+    protected virtual void FadeInAnimation(float animationTime)
+    {
+        
+    }
+
+    protected virtual void FadeOutAnimation(float animationTime)
+    {
+        
     }
     
 }
