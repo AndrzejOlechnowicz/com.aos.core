@@ -12,7 +12,7 @@ public class CanvasGroupController : MonoBehaviour
     [SerializeField] private bool activeOnStart;
     [SerializeField] private bool deactivateGameObjectAfterHide;
     
-    private CanvasGroup _group;
+    protected CanvasGroup _group;
     
 
     private void Awake()
