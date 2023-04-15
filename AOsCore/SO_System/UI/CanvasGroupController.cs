@@ -26,6 +26,9 @@ public class CanvasGroupController : MonoBehaviour
 
     public void Disable()
     {
+        if (_group == null)
+            return;
+        
         _group.interactable = false;
         _group.blocksRaycasts = false;
         _group.alpha = 0;
@@ -34,12 +37,13 @@ public class CanvasGroupController : MonoBehaviour
         {
             Deactivate();
         }
-        
     }
 
     public void Enable()
     {
-        //Debug.Log($"Enabling canvas controller : {name}");
+        if (_group == null)
+            return;
+        
         _group.interactable = true;
         _group.blocksRaycasts = true;
         _group.alpha = 1;
@@ -53,6 +57,9 @@ public class CanvasGroupController : MonoBehaviour
     /// </summary>
     public void FadeOut(float fadeTime)
     {
+        if (_group == null)
+            return;
+        
         _group.interactable = true;
         _group.blocksRaycasts = true;
         FadeOutAnimation(fadeTime);
@@ -77,6 +84,9 @@ public class CanvasGroupController : MonoBehaviour
     /// </summary>
     public void FadeIn(float fadeTime = 1)
     {
+        if (_group == null)
+            return;
+        
         _group.interactable = false;
         _group.blocksRaycasts = false;
         FadeInAnimation(fadeTime);
@@ -99,7 +109,6 @@ public class CanvasGroupController : MonoBehaviour
         {
             gameObject.SetActive(true);
         }
-        
     }
 
     private void Deactivate()
