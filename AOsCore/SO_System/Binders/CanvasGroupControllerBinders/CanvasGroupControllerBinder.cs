@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using AOsCore.SO_System.UIBinders;
+using AOsCore.UI;
 using UnityEngine;
 [Serializable]
 public class CanvasGroupControllerBinder<T> : DataBinder<T>
