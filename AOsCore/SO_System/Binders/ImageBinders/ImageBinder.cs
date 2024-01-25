@@ -9,7 +9,7 @@ namespace AOsCore.SO_System.Binders.ImageBinders
     {
         protected Image _image;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             _image = GetComponent<Image>();
         }
