@@ -32,7 +32,6 @@ public class FloatImageScaleBinder : ImageBinder<float>
             // on the first setup there should be no animation
             SetImageScale(data.Value);
             firstSetup = false;
-            Debug.Log("FloatImageScaleBinder - FIRST SETUP");
             return;
         }
         if (shouldAnimateIncrease || shouldAnimateDecrease)
@@ -87,14 +86,14 @@ public class FloatImageScaleBinder : ImageBinder<float>
 
     private IEnumerator ProgressAnimationCoro(float dataValue, float progress, float progressModifier)
     {
-        Debug.Log($"<color=red>Starting progress animation coroutine..., dataValue: {dataValue}, progress: {progress},  progressModifier: {progressModifier}</color>");
+        //Debug.Log($"<color=red>Starting progress animation coroutine..., dataValue: {dataValue}, progress: {progress},  progressModifier: {progressModifier}</color>");
         if (dataValue > progress)
         {
             while (dataValue > progress)
             {
                 progress += progressModifier;
                 SetImageScale(progress);
-                Debug.Log($"progress: {progress},  progressModifier:{progressModifier}");
+                //Debug.Log($"progress: {progress},  progressModifier:{progressModifier}");
                 yield return new WaitForSecondsRealtime(0.01f);
             }
         }
@@ -104,7 +103,7 @@ public class FloatImageScaleBinder : ImageBinder<float>
             {
                 progress += progressModifier;
                 SetImageScale(progress);
-                Debug.Log($"progress: {progress},  progressModifier:{progressModifier}");
+                //Debug.Log($"progress: {progress},  progressModifier:{progressModifier}");
                 yield return new WaitForSecondsRealtime(0.01f);
             }
         }
