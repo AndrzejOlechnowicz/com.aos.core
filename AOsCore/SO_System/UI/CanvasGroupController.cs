@@ -89,7 +89,7 @@ namespace AOsCore.UI
 
             if (deactivateGameObjectAfterHide)
             {
-                Invoke(nameof(Deactivate), fadeTime);
+                StartCoroutine(DeactivationCoro(fadeTime));
             }
         }
 
@@ -122,5 +122,10 @@ namespace AOsCore.UI
 
         }
 
+        protected virtual IEnumerator DeactivationCoro(float deactivateAfterSeconds)
+        {
+            yield return new WaitForSecondsRealtime(deactivateAfterSeconds);
+            Deactivate();
+        }
     }
 }
