@@ -1,9 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-//using DG.Tweening;
-//using DG.Tweening.Core;
-//using DG.Tweening.Plugins.Options;
 using UnityEngine;
 
 namespace AOsCore.UI
@@ -66,7 +61,6 @@ namespace AOsCore.UI
             _group.blocksRaycasts = true;
             FadeOutAnimation(fadeTime);
 
-            Debug.Log("InteractionButtonInfo  - Canvas group controller - Activate");
             Activate();
         }
 
@@ -105,7 +99,7 @@ namespace AOsCore.UI
             Disable();
         }
 
-        private void Activate()
+        protected virtual void Activate()
         {
             if (!gameObject.activeInHierarchy)
             {
@@ -113,7 +107,7 @@ namespace AOsCore.UI
             }
         }
 
-        private void Deactivate()
+        protected virtual void Deactivate()
         {
             gameObject.SetActive(false);
         }
@@ -130,4 +124,3 @@ namespace AOsCore.UI
 
     }
 }
-
